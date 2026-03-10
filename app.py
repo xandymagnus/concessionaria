@@ -1,6 +1,9 @@
 from concessionaria import Concessionaria
+from veiculos.carro import Carro
 
-carro = Concessionaria('BMW', '320i', '2005')
+
+carro = Carro('BMW', '320i', '2005', 4, 6)
+
 
 def main():
     print(carro)
