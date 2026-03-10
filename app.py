@@ -2,11 +2,13 @@ from concessionaria import Concessionaria
 from veiculos.carro import Carro
 
 
-carro = Carro('BMW', '320i', '2005', 4, 6)
-
+veiculo1 = Concessionaria('bmw', 'm3', '2005')
+veiculo2 = Concessionaria('mercedes', 'g63', '2010')
+veiculo3 = Concessionaria('audi', 'r8', '2013')
+veiculo3.alterar_estado()
 
 def main():
-    print(carro)
+    Concessionaria.lista_veiculo()
         
 if __name__ == '__main__':
     main()
