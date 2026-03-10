@@ -6,7 +6,8 @@ class Carro (Concessionaria):
         
         self._portas = portas
         self._assentos = assentos
+        self._automatico = False
         
     def __str__(self):
-        return super().__str__() + f' | Portas: {self._portas} | Assentos: {self._assentos}'
+        return super().__str__() + f' | Portas: {self._portas} | Assentos: {self._assentos} | Automatico: {self._automatico}'
          
