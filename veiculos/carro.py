@@ -1,7 +1,7 @@
 from concessionaria import Concessionaria
 
 class Carro (Concessionaria):
-    def __init__(self, marca, modelo, ano, portas, assentos):
+    def __init__(self, marca, modelo, ano, portas=None, assentos=None):
         super().__init__(marca, modelo, ano)
         
         self._portas = portas
