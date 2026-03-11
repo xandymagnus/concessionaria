@@ -3,9 +3,9 @@ class Concessionaria():
     
     def __init__(self, marca, modelo, ano):
         
-        self._marca = marca.upper()
-        self._modelo = modelo.upper()
-        self._ano = ano
+        self._marca = str(marca.upper())
+        self._modelo = str(modelo.upper())
+        self._ano = str(ano)
         self._venda = True
         Concessionaria.veiculos.append(self)
 
@@ -14,10 +14,11 @@ class Concessionaria():
     
     @classmethod
     def lista_veiculo(cls):
-        print(f'{'Marca'.ljust(25)} | {'Modelo'.ljust(25)} | {'Ano'.ljust(25)} | {'Venda'}\n')
+        print(f'{'Marca'.ljust(25)} | {'Modelo'.ljust(25)} | {'Ano'.ljust(25)} | {'Venda'}\n {'-' * 90}')
         
         for veiculo in cls.veiculos:
-            print(f'{veiculo._marca.ljust(25)} | {veiculo._modelo.ljust(25)} | {veiculo._ano.ljust(25)} | {veiculo._venda}')
+            if veiculo._venda == True:
+                print(f'{veiculo._marca.ljust(25)} | {veiculo._modelo.ljust(25)} | {veiculo._ano.ljust(25)} | {veiculo._venda}')
     
     @property
     def ativo(self):
@@ -25,3 +26,5 @@ class Concessionaria():
     
     def alterar_estado(self):
         self._venda = not self._venda
+        
+    
