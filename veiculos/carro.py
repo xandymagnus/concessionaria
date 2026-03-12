@@ -8,7 +8,7 @@ class Carro (Concessionaria):
         
         self._portas = str(portas)
         self._assentos = str(assentos)
-        self._automatico = False if '' else True
+        self._automatico = False
         Carro.carros.append(self)
         
     def __str__(self):
