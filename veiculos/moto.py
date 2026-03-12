@@ -3,12 +3,12 @@ from concessionaria import Concessionaria
 class Moto(Concessionaria):
     motos = []
     
-    def __init__(self, marca, modelo, ano, estilo, cor):
+    def __init__(self, marca, modelo, ano, estilo, cor, bagageiro=None):
         super().__init__(marca, modelo, ano)
         
-        self._estilo = str(estilo.upper())
-        self._cor = str(cor.upper())
-        self._bagageiro = False
+        self._estilo = str(estilo.upper()) if estilo is not None else None
+        self._cor = str(cor.upper()) if cor is not None else None
+        self._bagageiro = False if bagageiro == '' else True
         Moto.motos.append(self)
         
     def __str__(self):
