@@ -3,12 +3,12 @@ from concessionaria import Concessionaria
 class Carro (Concessionaria):
     carros = []
     
-    def __init__(self, marca, modelo, ano, portas=None, assentos=None):
+    def __init__(self, marca, modelo, ano, portas=None, assentos=None, automatico=None):
         super().__init__(marca, modelo, ano)
         
-        self._portas = str(portas)
-        self._assentos = str(assentos)
-        self._automatico = False
+        self._portas = str(portas) if portas is not None else None
+        self._assentos = str(assentos) if assentos is not None else None
+        self._automatico = False if automatico == '' else True
         Carro.carros.append(self)
         
     def __str__(self):
