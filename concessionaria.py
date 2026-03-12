@@ -26,5 +26,3 @@ class Concessionaria():
     
     def alterar_estado(self):
         self._venda = not self._venda
-        
-    
