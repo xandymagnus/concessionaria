@@ -32,12 +32,12 @@ def atributos_moto():
     
     return marca, modelo, ano, estilo, cor
 
-moto1 = Moto(*atributos_moto())
-moto1.alterar_estado()
+# moto1 = Moto(*atributos_moto())
+# moto1.alterar_estado()
 
-moto2 = Moto(*atributos_moto())
-moto3 = Moto(*atributos_moto())
-veiculo2 = Concessionaria('bmw', '312', '2019')
+# moto2 = Moto(*atributos_moto())
+# moto3 = Moto(*atributos_moto())
+# veiculo2 = Concessionaria('bmw', '312', '2019')
 
 carro1 = Carro(*atributos_carro())
 
