@@ -8,7 +8,7 @@ class Carro (Concessionaria):
         
         self._portas = str(portas)
         self._assentos = str(assentos)
-        self._automatico = False
+        self._automatico = False if '' else True
         Carro.carros.append(self)
         
     def __str__(self):
@@ -16,9 +16,9 @@ class Carro (Concessionaria):
     
     @classmethod
     def lista_carros(cls):
-        print(f'{'Marca'.ljust(25)} | {'Modelo'.ljust(25)} | {'Ano'.ljust(25)} | {'Portas'.ljust(25)} | {'Assentos'.ljust(25)} | {'Venda'}\n {'-' * 150}')
+        print(f'{'Marca'.ljust(25)} | {'Modelo'.ljust(25)} | {'Ano'.ljust(25)} | {'Portas'.ljust(25)} | {'Assentos'.ljust(25)} | {'Automatico'.ljust(25)} | {'Venda'}\n {'-' * 190}')
         
         for carro in cls.carros:
             if carro._venda == True:
-                print(f'{carro._marca.ljust(25)} | {carro._modelo.ljust(25)} | {carro._ano.ljust(25)} | {carro._portas.ljust(25)} | {carro._assentos.ljust(25)} | {carro._venda}')
+                print(f'{carro._marca.ljust(25)} | {carro._modelo.ljust(25)} | {carro._ano.ljust(25)} | {carro._portas.ljust(25)} | {carro._assentos.ljust(25)} | {'Sim'.ljust(25) if carro._automatico == True else 'Não'.ljust(25)} | {carro._venda}')
                 
