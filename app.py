@@ -29,14 +29,15 @@ def atributos_moto():
     
     estilo = input('Estilo: ')
     cor = input('Cor: ')
+    bagageiro = input('Bagageiro: ')
     
-    return marca, modelo, ano, estilo, cor
+    return marca, modelo, ano, estilo, cor, bagageiro
 
 # moto1 = Moto(*atributos_moto())
 # moto1.alterar_estado()
 
 # moto2 = Moto(*atributos_moto())
-# moto3 = Moto(*atributos_moto())
+moto3 = Moto(*atributos_moto())
 # veiculo2 = Concessionaria('bmw', '312', '2019')
 
 carro1 = Carro(*atributos_carro())
